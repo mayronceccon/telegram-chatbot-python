@@ -1,1 +1,7 @@
+http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html
+https://juliarizza.wordpress.com/2016/08/06/fazendo-um-bot-para-telegram-em-python/
 https://python-telegram-bot.org
+
+git push heroku master
+
+heroku config:set BOT_API_TOKEN=API
