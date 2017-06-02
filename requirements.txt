@@ -1,0 +1,4 @@
+Requirement already satisfied (use --upgrade to upgrade): pyTelegramBotAPI in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): requests in /usr/lib/python2.7/dist-packages (from pyTelegramBotAPI)
+Requirement already satisfied (use --upgrade to upgrade): six in /usr/lib/python2.7/dist-packages (from pyTelegramBotAPI)
+Cleaning up...
