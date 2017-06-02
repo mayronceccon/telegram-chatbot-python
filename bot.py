@@ -1,10 +1,17 @@
 import os
-import telebot
-  
-bot = telebot.TeleBot(os.environ['BOT_API_TOKEN'])
+from telegram.ext import Updater, CommandHandler
 
-@bot.message_handler(commands=['start', 'help'])
-def send_welcome(message):
-    bot.reply_to(message, u"Ola, bem-vindo ao bot!")
+def start(bot, update):
+    update.message.reply_text('Hello World!')
 
-bot.polling()
+def hello(bot, update):
+    update.message.reply_text(
+        'Hello {}'.format(update.message.from_user.first_name))
+
+updater = Updater(os.environ['BOT_API_TOKEN'])
+
+updater.dispatcher.add_handler(CommandHandler('start', start))
+updater.dispatcher.add_handler(CommandHandler('hello', hello))
+
+updater.start_polling()
+updater.idle()
